@@ -1,0 +1,70 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    display: grid;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    padding-inline: 3rem;
+}
+.container {
+    display: flex;
+    gap: 1rem;
+}
+.container figure {
+    background-position: center;
+    background-size: cover;
+    height: 80vh;
+    width: 50px;
+    flex: .5;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    cursor: pointer;
+    transition: flex .7s ease-in;
+    -webkit-transition: flex .7s ease-in;
+    -moz-transition: flex .7s ease-in;
+    -ms-transition: flex .7s ease-in;
+    -o-transition: flex .7s ease-in;
+    position: relative;
+}
+.container figure.active {
+    flex: 5;
+}
+.container figure:first-child {
+    background-image: url('https://images.unsplash.com/photo-1558979158-65a1eaa08691?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80');
+}
+.container figure:nth-child(2) {
+    background-image: url("https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1353&q=80");
+}
+.container figure:nth-child(3) {
+    background-image: url("https://images.unsplash.com/photo-1551009175-8a68da93d5f9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1351&q=80");
+}
+.container figure:nth-child(4) {
+    background-image: url("https://images.unsplash.com/photo-1549880338-65ddcdfd017b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80");
+}
+.container figure:last-child {
+    background-image: url('https://images.unsplash.com/photo-1572276596237-5db2c3e16c5d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80');
+}
+.container figure h3 {
+    position: absolute;
+    color: white;
+    font-size: 2rem;
+    bottom: 10px;
+    left: 10px;
+    opacity: 0;
+    transition: opacity .3s ease-in;
+    -webkit-transition: opacity .3s ease-in;
+    -moz-transition: opacity .3s ease-in;
+    -ms-transition: opacity .3s ease-in;
+    -o-transition: opacity .3s ease-in;
+}
+.container figure.active h3 {
+    opacity: 1;
+}

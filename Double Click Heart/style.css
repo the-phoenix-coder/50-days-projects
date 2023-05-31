@@ -1,0 +1,44 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.container > * {
+    margin-block: 1rem;
+    text-align: center;
+    user-select: none;
+}
+svg {
+    fill: red;
+    width: 25px;
+    aspect-ratio: 1.1;
+}
+.img {
+    width: 350px;
+    height: 450px;
+    background: url('https://images.unsplash.com/photo-1504215680853-026ed2a45def?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=334&q=80') no-repeat center;
+    background-size: cover;
+    margin: auto;
+    cursor: pointer;
+    box-shadow: 0 4px 8px #a3a3a3;
+    position: relative;
+    overflow: hidden;
+}
+.heart {
+    background-image: url('./imgs/heart-solid.svg');
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    animation: like .6s linear;
+    -webkit-animation: like .6s linear;
+    scale: 0;
+}
+@keyframes like {
+    to {
+        opacity: 0;
+        scale: 10;
+    }
+}

@@ -1,0 +1,100 @@
+:root {
+    --accent-dark: #144FC6;
+    --accent-light: #3494E4;
+    --accent-lighter: #6AB3F8;
+}
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+body {
+    background-color: var(--accent-light);
+    display: grid;
+    place-content: center;
+    text-align: center;
+}
+body > h1 {
+    margin-block: 1rem;
+}
+body > * {
+    color: white;
+}
+.head-cup {
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    height: 330px;
+    width: 150px;
+    margin: auto;
+    margin-block: 1rem;
+    border-radius: 0 0 40px 40px;
+    -webkit-border-radius: 0 0 40px 40px;
+    -moz-border-radius: 0 0 40px 40px;
+    -ms-border-radius: 0 0 40px 40px;
+    -o-border-radius: 0 0 40px 40px;
+    border: 3px solid var(--accent-dark);
+}
+.big {
+    display: flex;
+    justify-content: column;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    transition: .3s ease;
+    -webkit-transition: .3s ease;
+    -moz-transition: .3s ease;
+    -ms-transition: .3s ease;
+    -o-transition: .3s ease;
+}
+.percent {
+    background-color: var(--accent-lighter);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 1.5rem;
+    height: 0;
+    transition: .3s ease;
+    -webkit-transition: .3s ease;
+    -moz-transition: .3s ease;
+    -ms-transition: .3s ease;
+    -o-transition: .3s ease;
+    border-radius: 0 0 40px 40px;
+    -webkit-border-radius: 0 0 40px 40px;
+    -moz-border-radius: 0 0 40px 40px;
+    -ms-border-radius: 0 0 40px 40px;
+    -o-border-radius: 0 0 40px 40px;
+}
+.cup {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: white;
+    color: var(--accent-dark);
+}
+.cups {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: .5rem;
+    width: 300px;
+    margin: auto;
+    margin-block: 1rem;
+}
+.small {
+    border: 3px solid var(--accent-dark);
+    border-radius: 0 0 40px 40px;
+    -webkit-border-radius: 0 0 40px 40px;
+    -moz-border-radius: 0 0 40px 40px;
+    -ms-border-radius: 0 0 40px 40px;
+    -o-border-radius: 0 0 40px 40px;
+    height: 150px;
+    cursor: pointer;
+    user-select: none;
+}
+.small.active {
+    background-color: var(--accent-lighter);
+}

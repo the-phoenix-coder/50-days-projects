@@ -1,0 +1,80 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+body {
+    background-color: #3B3B98;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container {
+    background-color: #23235B;
+    color: white;
+    width: 400px;
+    padding: 1.5rem;
+    border-radius: .5rem;
+    -webkit-border-radius: .5rem;
+    -moz-border-radius: .5rem;
+    -ms-border-radius: .5rem;
+    -o-border-radius: .5rem;
+}
+h1 {
+    text-align: center;
+}
+.output {
+    background-color: #151537;
+    height: 3rem;
+    align-items: center;
+    padding: .4rem;
+}
+.password {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+.icon {
+    background-color: #23235B;
+    height: 40px;
+    width: 40px;
+    display: grid;
+    place-content: center;
+    cursor: pointer;
+}
+svg {
+    width: 20px;
+    fill: white;
+}
+.even-column {
+    display: flex;
+    justify-content: space-between;
+    margin-block: 1.2rem;
+}
+label {
+    user-select: none;
+}
+input[type='checkbox'] {
+    width: 15px;
+}
+button {
+    background-color: #3B3B98;
+    width: 100%;
+    padding-block: .5rem;
+    border: 0;
+    outline: 0;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background.3s;
+    -webkit-transition: background.3s;
+    -moz-transition: background.3s;
+    -ms-transition: background.3s;
+    -o-transition: background.3s;
+}
+button:hover {
+    background-color: #313183;
+}

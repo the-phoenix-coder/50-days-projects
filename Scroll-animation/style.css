@@ -1,0 +1,57 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+body {
+    background-color: #EFEDD6;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.box {
+    background-color: #08f;
+    color: white;
+    width: 400px;
+    height: 200px;
+    display: grid;
+    place-content: center;
+    box-shadow: 2px 4px 5px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    margin: 10px;
+    transition: transform .4s ease-in;
+    -webkit-transition: transform .4s ease-in;
+    -moz-transition: transform .4s ease-in;
+    -ms-transition: transform .4s ease-in;
+    -o-transition: transform .4s ease-in;
+}
+.box:nth-child(even) {
+    transform: translateX(400%);
+    -webkit-transform: translateX(400%);
+    -moz-transform: translateX(400%);
+    -ms-transform: translateX(400%);
+    -o-transform: translateX(400%);
+}
+.box:nth-child(odd) {
+    transform: translateX(-400%);
+    -webkit-transform: translateX(-400%);
+    -moz-transform: translateX(-400%);
+    -ms-transform: translateX(-400%);
+    -o-transform: translateX(-400%);
+}
+.box.show {
+    transform: translateX(0);
+    -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -ms-transform: translateX(0);
+    -o-transform: translateX(0);
+}

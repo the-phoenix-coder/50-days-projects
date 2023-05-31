@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Password Generator</title>
+    <script src="main.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Password Generator</h1>
+        <div class="even-column output">
+            <div class="password"></div>
+            <div class="icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
+                    <path d="M280 64h40c35.3 0 64 28.7 64 64V448c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V128C0 92.7 28.7 64 64 64h40 9.6C121 27.5 153.3 0 192 0s71 27.5 78.4 64H280zM64 112c-8.8 0-16 7.2-16 16V448c0 8.8 7.2 16 16 16H320c8.8 0 16-7.2 16-16V128c0-8.8-7.2-16-16-16H304v24c0 13.3-10.7 24-24 24H192 104c-13.3 0-24-10.7-24-24V112H64zm128-8a24 24 0 1 0 0-48 24 24 0 1 0 0 48z"/></svg>
+            </div>
+        </div>
+        <div class="even-column">
+            <p>Password Length</p>
+            <input type="number" value="20" min="4" max="20">
+        </div>
+        <div class="even-column">
+            <label for="uppercase">Include uppercase Letters</label>
+            <input type="checkbox" name="uppercase" id="uppercase">
+        </div>
+        <div class="even-column">
+            <label for="lowercase">Include lowercase Letters</label>
+            <input type="checkbox" name="lowercase" id="lowercase">
+        </div>
+        <div class="even-column">
+            <label for="numbers">Include numbers</label>
+            <input type="checkbox" name="numbers" id="numbers">
+        </div>
+        <div class="even-column">
+            <label for="symbols">Include symbols</label>
+            <input type="checkbox" name="symbols" id="symbols">
+        </div>
+        <button>Generate Password</button>
+    </div>
+</body>
+</html>

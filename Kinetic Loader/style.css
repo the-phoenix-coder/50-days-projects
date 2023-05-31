@@ -1,0 +1,65 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto';
+}
+body {
+    background-color: #2C3E50;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+.container {
+    position: relative;
+    height: 80px;
+    width: 80px;
+}
+.container::before,
+.container::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    border: 50px solid transparent;
+    border-bottom-color: #fff;
+    animation: rotate1 2s linear infinite .5s;
+    -webkit-animation: rotate1 2s linear infinite .5s;
+}
+.container::before {
+    rotate: 90deg;
+    animation: rotate2 2s linear infinite;
+    -webkit-animation: rotate2 2s linear infinite;
+}
+@keyframes rotate1 {
+    0%,
+    25% {
+        rotate: 0deg
+    }
+    50%,
+    75% {
+        rotate: 180deg;
+    }
+    100% {
+        rotate: 360deg;
+    }
+}
+@keyframes rotate2 {
+    0%,
+    25% {
+        rotate: 90deg
+    }
+    50%,
+    75% {
+        rotate: 270deg;
+    }
+    100% {
+        rotate: 450deg;
+    }
+}

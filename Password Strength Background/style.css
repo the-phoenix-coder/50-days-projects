@@ -1,0 +1,40 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+body {
+    background-image: url(https://images.unsplash.com/photo-1556745757-8d76bdb6984b);
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(20px);
+}
+.form {
+    background-color: white;
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+input, button {
+    padding: .7rem;
+    border: 1px solid #AAA;
+}
+input::placeholder {
+    color: #AAA;
+}
+button {
+    cursor: pointer;
+    border: 0;
+    outline: 0;
+    background-color: black;
+    color: white;
+    font-size: 1rem;
+}

@@ -1,0 +1,131 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+body {
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+body::before, body::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    z-index: -1;
+}
+body::before {
+    top: 0;
+    background-color: #EAFBFF;
+}
+body::after {
+    bottom: 0;
+    background-color: #5290F9;
+}
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #FFF;
+    width: 80px;
+    height: 80px;
+    padding: 1rem;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, .3);
+    border-radius: .5rem;
+    -webkit-border-radius: .5rem;
+    -moz-border-radius: .5rem;
+    -ms-border-radius: .5rem;
+    -o-border-radius: .5rem;
+    transition: width .6s linear;
+    -webkit-transition: width .6s linear;
+    -moz-transition: width .6s linear;
+    -ms-transition: width .6s linear;
+    -o-transition: width .6s linear;
+    overflow: hidden;
+}
+nav.active {
+    width: 420px;
+}
+ul {
+    width: 0;;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 1.3rem;
+    transition: width .6s linear;
+    -webkit-transition: width .6s linear;
+    -moz-transition: width .6s linear;
+    -ms-transition: width .6s linear;
+    -o-transition: width .6s linear;
+}
+nav.active ul {
+    width: 100%;
+}
+nav ul li {
+    position: relative;
+    opacity: 0;
+    transform: rotateY(0deg);
+    -webkit-transform: rotateY(0deg);
+    -moz-transform: rotateY(0deg);
+    -ms-transform: rotateY(0deg);
+    -o-transform: rotateY(0deg);
+    transition: transform .6s linear, opacity .6s linear;
+    -webkit-transition: transform .6s linear, opacity .6s linear;
+    -moz-transition: transform .6s linear, opacity .6s linear;
+    -ms-transition: transform .6s linear, opacity .6s linear;
+    -o-transition: transform .6s linear, opacity .6s linear;
+}
+nav.active ul li {
+    opacity: 1;
+    transform: rotateY(360deg);
+    -webkit-transform: rotateY(360deg);
+    -moz-transform: rotateY(360deg);
+    -ms-transform: rotateY(360deg);
+    -o-transform: rotateY(360deg);
+}
+button {
+    width: 80px;
+    height: 80px;
+    border: 0;
+    outline: 0;
+    background-color: #FFF;
+    cursor: pointer;
+    display: grid;
+    place-content: center;
+    z-index: 12;
+}
+button div {
+    width: 20px;
+    height: 2px;
+    background-color: #5290f9;
+    margin: .3rem;
+    transition: transform .6s linear, rotate .6s linear;
+    -webkit-transition: transform .6s linear, rotate .6s linear;
+    -moz-transition: transform .6s linear, rotate .6s linear;
+    -ms-transition: transform .6s linear, rotate .6s linear;
+    -o-transition: transform .6s linear, rotate .6s linear;
+}
+nav.active button div:first-child {
+    rotate: -765deg;
+    transform: translateY(8px);
+    -webkit-transform: translateY(8px);
+    -moz-transform: translateY(8px);
+    -ms-transform: translateY(8px);
+    -o-transform: translateY(8px);
+}
+nav.active button div:last-child {
+    rotate: 765deg;
+    transform: translateY(-8px);
+    -webkit-transform: translateY(-8px);
+    -moz-transform: translateY(-8px);
+    -ms-transform: translateY(-8px);
+    -o-transform: translateY(-8px);
+}

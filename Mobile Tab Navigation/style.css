@@ -1,0 +1,79 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+.mobile {
+    width: 340px;
+    height: 600px;
+    overflow: hidden;
+    position: relative;
+    border: 3px solid #eee;
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+}
+nav {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: white;
+    height: 60px;
+    
+}
+ul {
+    display: flex;
+    gap: 1rem;
+    list-style: none;
+    align-items: center;
+    justify-content: space-around;
+}
+li {
+    text-align: center;
+    cursor: pointer;
+    transition: color .3s, fill .3s;
+    -webkit-transition: color .3s, fill .3s;
+    -moz-transition: color .3s, fill .3s;
+    -ms-transition: color .3s, fill .3s;
+    -o-transition: color .3s, fill .3s;
+}
+li:is(:hover, .active) {
+    fill: #8e44ad;
+    color: #8e44ad;
+}
+.content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    object-fit: cover;
+    height: calc(100% - 60px);
+    width: 100%;
+    transition: opacity .4s ease;
+    -webkit-transition: opacity .4s ease;
+    -moz-transition: opacity .4s ease;
+    -ms-transition: opacity .4s ease;
+    -o-transition: opacity .4s ease;
+}
+.mobile .content.show {
+    opacity: 1;
+}
+svg {
+    width: 20px;
+    height: 20px;
+    margin-top: 10px;
+}
+p {
+    font-size: .8rem;
+}

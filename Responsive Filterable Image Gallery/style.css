@@ -1,0 +1,77 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    gap: 4rem
+}
+ul {
+    display: flex;
+    gap: 1rem;
+    list-style: none;
+}
+ul li {
+    cursor: pointer;
+    padding: .5rem 1rem;
+    border-radius: .5rem;
+    -webkit-border-radius: .5rem;
+    -moz-border-radius: .5rem;
+    -ms-border-radius: .5rem;
+    -o-border-radius: .5rem;
+}
+ul li.active {
+    background-color: #1786e0;
+    color: white;
+}
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .5rem;
+    width: 600px;
+    max-width: 100%;
+}
+.container .image {
+    color: white;
+    font-weight: bold;
+    padding: 4rem;
+    text-align: center;
+    border-radius: .5rem;
+    -webkit-border-radius: .5rem;
+    -moz-border-radius: .5rem;
+    -ms-border-radius: .5rem;
+    -o-border-radius: .5rem;
+}
+.container .image[data-name='html'] {
+    background-color: red;
+}
+.container .image[data-name='css'] {
+    background-color: blue;
+}
+.container .image[data-name='javascript'] {
+    background-color: yellowgreen;
+}
+.container .image.hide {
+    display: none;
+}
+.container .image.show {
+    display: block;
+    animation: showing .3s ease;
+    -webkit-animation: showing .3s ease;
+}
+@keyframes showing {
+    0% {
+        scale: .5;
+    }
+    100% {
+        scale: 1;
+    }
+}

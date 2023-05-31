@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto';
+}
+body {
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+button {
+    background-color: #800080;
+    color: white;
+    padding: 1.2rem 2.8rem;
+    font-size: 1rem;
+    outline: 0;
+    letter-spacing: .2rem;
+    position: relative;
+    overflow: hidden;
+}
+.animated {
+    position: absolute;
+    background-color: #fff;
+    width: 100px;
+    height: 100px;
+    transform: translate(-50%, -50%) scale(0);
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    -webkit-transform: translate(-50%, -50%) scale(0);
+    -moz-transform: translate(-50%, -50%) scale(0);
+    -ms-transform: translate(-50%, -50%) scale(0);
+    -o-transform: translate(-50%, -50%) scale(0);
+    animation: scaling .5s ease-out;
+    -webkit-animation: scaling .5s ease-out;
+}
+@keyframes scaling {
+    to {
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(3);
+        -webkit-transform: translate(-50%, -50%) scale(3);
+        -moz-transform: translate(-50%, -50%) scale(3);
+        -ms-transform: translate(-50%, -50%) scale(3);
+        -o-transform: translate(-50%, -50%) scale(3);
+}
+}

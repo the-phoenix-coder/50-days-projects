@@ -1,0 +1,70 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+body {
+    background-color: #CED8E6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+.container {
+    background-color: white;
+    width: 600px;
+    max-width: 100%;
+    margin: 10px;
+    border-radius: .6rem;
+    -webkit-border-radius: .6rem;
+    -moz-border-radius: .6rem;
+    -ms-border-radius: .6rem;
+    -o-border-radius: .6rem;
+    box-shadow: 0 0 6px rgba(0 0 0 / .2);
+}
+.body {
+    padding: 4rem;
+}
+h2 {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+ul {
+    list-style: none;
+}
+ul li {
+    margin-bottom: 1rem;
+}
+label {
+    font-weight: 500;
+    font-size: 1.1rem;
+    cursor: pointer;
+}
+button {
+    width: 100%;
+    border: 0;
+    outline: 0;
+    padding: 1.3rem;
+    font-size: 1.2rem;
+    cursor: pointer;
+    background-color: #9e42c5;
+    color: white;
+    font-weight: 300;
+    transition: background .3s;
+    -webkit-transition: background .3s;
+    -moz-transition: background .3s;
+    -ms-transition: background .3s;
+    -o-transition: background .3s;
+    border-radius: 0 0 .6rem .6rem;
+    -webkit-border-radius: 0 0 .6rem .6rem;
+    -moz-border-radius: 0 0 .6rem .6rem;
+    -ms-border-radius: 0 0 .6rem .6rem;
+    -o-border-radius: 0 0 .6rem .6rem;
+}
+button:hover {
+    background-color: #732D91;
+}

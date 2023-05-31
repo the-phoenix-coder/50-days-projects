@@ -1,0 +1,100 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+body {
+    display: grid;
+    place-content: center;
+    height: 100vh;
+    overflow: hidden;
+    background-color: #4682B4;
+}
+.container {
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 1.5rem 3rem;
+    color: white;
+    border-radius: .5rem;
+    -webkit-border-radius: .5rem;
+    -moz-border-radius: .5rem;
+    -ms-border-radius: .5rem;
+    -o-border-radius: .5rem;
+}
+.container h1 {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+.container a {
+    color: lightblue;
+}
+button {
+    cursor: pointer;
+    width: 100%;
+    background-color: lightblue;
+    padding: 1rem;
+    font-size: 1rem;
+    border: 0;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    outline: 0;
+}
+button:active {
+    scale: .98;
+}
+input {
+    width: 100%;
+    border: 0;
+    outline: 0;
+    background-color: transparent;
+    border-bottom: 2px solid white;
+    transition: .3s;
+    -webkit-transition: .3s;
+    -moz-transition: .3s;
+    -ms-transition: .3s;
+    -o-transition: .3s;
+    padding: 1rem 0;
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+}
+input:focus, input:valid {
+    border-color: lightblue;
+}
+.container > * {
+    margin-bottom: 2rem;
+}
+.form-section {
+    position: relative;
+}
+.form-section label {
+    position: absolute;
+    top: 15px;
+    left: 0;
+    pointer-events: none;
+}
+label span {
+    display: inline-block;
+    font-size: 1rem;
+    transition: 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+}
+input.active + label span{
+    color: lightblue;
+    transform: translateY(-30px);
+    -webkit-transform: translateY(-30px);
+    -moz-transform: translateY(-30px);
+    -ms-transform: translateY(-30px);
+    -o-transform: translateY(-30px);
+}
+input.invalid {
+    border-color: red;
+}
+input.invalid + label span {
+    color: red;
+}
