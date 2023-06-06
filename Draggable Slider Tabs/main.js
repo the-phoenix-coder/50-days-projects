@@ -4,9 +4,6 @@ const icons = document.querySelectorAll('svg')
 
 let isDragging = false
 
-
-console.log(tabsContainer.clientWidth)
-
 const handleIcons = scrollValue =>
 {
     let maxScroll = tabsContainer.scrollWidth - tabsContainer.clientWidth
@@ -36,7 +33,6 @@ const dragging = e =>
 {
     if (!isDragging) return
     tabsContainer.classList.add('dragging')
-    tabsContainer.scrollLeft -= e.movementX
     handleIcons(tabsContainer.scrollLeft)
 }
 
@@ -47,5 +43,7 @@ const dragStop = () =>
 }
 
 tabsContainer.addEventListener('mousedown', () => isDragging = true)
+
 tabsContainer.addEventListener('mousemove', dragging)
+
 document.addEventListener('mouseup', dragStop)
